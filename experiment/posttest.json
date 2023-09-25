@@ -1,39 +1,150 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
+[
+  {"question":"1. Does the order of input and output ports in the argument of module matters?",
+  "answers":{
+              "a":"Yes",
+              "b":"No",
+              "c":"May matter in some situation",
+              "d":"May not matter in some situation"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+    "a" : "In Verilog, the order of input and output ports in the module declaration determines the order in which they should be connected when instantiating the module",
+    "b" : "If the order is not followed correctly, the inputs and outputs may be swapped or connected incorrectly, resulting in unexpected behavior or errors in the design.",
+    "c" : "It is not dependent on specific situations or conditions.",
+    "d" : "It is not dependent on specific situations or conditions."
+  },
+  "difficulty": "intermediate"},
+              
+  {"question":"2. Which of the following loops are supported by verilog?",
+  "answers":{
+              "a":"If-else loop",
+              "b":"For loop",
+              "c":"While loop",
+              "d":"All of these"
+            },
+  "correctAnswer":"d",
+  "explanations": {
+    "a" : "Conditional statements can be used within procedural blocks to achieve similar functionality.",
+    "b" : "Verilog supports the For loop, which is commonly used for iterating over a sequence of values or executing a block of code a specific number of times.",
+    "c" : "Verilog supports the While loop, which is used for repeatedly executing a block of code as long as a certain condition remains true.",
+    "d" : "It supports all the above loops"
+  },
+  "difficulty": "beginner"}, 
+              
+  {"question":"3. What defines the beginning and end of a loop",
+  "answers":{
+              "a":"Begin----end",
+              "b":"Curly brackets ()",
+              "c":"None of these",
+              "d":"Both of them"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+    "a" : "In Verilog, the 'begin' keyword signifies the start of a loop block, and the 'end' keyword indicates the end of the loop block.",
+    "b" : "In Verilog, curly brackets '{}' are used for concatenation and grouping of signals, but they are not specifically used to define the beginning and end of a loop.",
+    "c" : "There is a specific construct in Verilog to define the beginning and end of a loop,",
+    "d" : "Only one/none among them is true"
+  },
+  "difficulty": "beginner"},
+              
+  {"question":"4. What defines high impedance state or floating state in verilog?",
+  "answers":{
+              "a":"1",
+              "b":"X",
+              "c":"Z",
+              "d":"Both X and Z"
+            },
+  "correctAnswer":"c",
+  "explanations": {
+    "a" : "In Verilog, '1' represents a logic high or a binary value of 1",
+    "b" : " In Verilog, 'X' represents an unknown value or an uninitialized state",
+    "c" : "In Verilog, 'Z' represents a high impedance state or a floating state.",
+    "d" : "Only one/none among them is correct"
+  },
+  "difficulty": "intermediate"},  
+              
+   
+  {"question":" 5. In the following figure A is input and B is output of inverter and C is clock. Tell whether inverter is working synchronously or asynchronously? <img src='images/syn.jpg'>",
+  "answers":{
+              "a":"Asynchronous",
+              "b":"Synchronous",
+              "c":"Unpredictable",
+              "d":"Sometimes synchronous and sometimes asynchronous"
+            },
+  "correctAnswer":"b",
+  "explanations": {
+  },
+  "difficulty": "advanced"},
+              
+  {"question":"6. In the above figure, tell whether inverter is working on positive edge or negative edge of clock? <img src='images/syn.jpg'>",
+  "answers":{
+              "a":"Negative edge",
+              "b":"Positive edge",
+              "c":"Both on positive edge and negative edge",
+              "d":"Middle of positive and negative edge of clock"
+            },
+  "correctAnswer":"b",
+  "explanations": {
+  },
+  "difficulty": "advanced"},  
+              
+   
+  {"question":"7. In the following figure tell whether reset is synchronous or asynchronous? <img src='images/asyn.jpg'>",
+  "answers":{
+              "a":"Asynchronous",
+              "b":"Synchronous",
+              "c":"Unpredictable",
+              "d":"Sometimes synchronous and sometimes asynchronous"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+  },
+  "difficulty": "advanced"},
+              
+  {"question":"8. What is the similar system task in verilog as printf in C?",
+  "answers":{
+              "a":"$monitor",
+              "b":"$display",
+              "c":"$print",
+              "d":"All of these"
+            },
+  "correctAnswer":"c",
+  "explanations": {
+    "a" : "This system task in Verilog is used for continuously displaying the values of variables or expressions during simulation",
+    "b" : "$display does not provide the same level of control over formatting as printf does",
+    "c" : "$print is a system task in Verilog that allows formatted output similar to printf in C.",
+    "d" : "Only one among them is correct"
+  },
+  "difficulty": "intermediate"},  
+              
+  
+  {"question":"9. In the figure given in ques7, tell whether it is a positive edge reset or negative edge?",
+  "answers":{
+              "a":"Both positive and negative edge reset",
+              "b":"Negative edge reset",
+              "c":"Positive edge",
+              "d":"Unpredictable"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+  },
+  "difficulty": "advanced"},
+              
+  {"question":"10. Can we include one source file in another in verilog?",
+  "answers":{
+              "a":"No",
+              "b":"Yes using `include",
+              "c":"Yes using `define",
+              "d":"Yes by just writing the name of file in another file"
+            },
+  "correctAnswer":"c",
+  "explanations": {
+    "a" : "Verilog allows the inclusion of one source file in another using different methods.",
+    "b" : "Although the include directive is used in Verilog to include one source file in another, it is not the most common or recommended method",
+    "c" : "The `define directive allows you to define macros or constants that can be used throughout the Verilog code, including the ability to include other source files.",
+    "d" : "Specific directives or commands are required in Verilog to include one source file in another."
+  },
+  "difficulty": "beginner"}           
+              
   ]
-}
+  
