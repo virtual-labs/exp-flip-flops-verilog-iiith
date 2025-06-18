@@ -11,10 +11,10 @@
       },
       "correctAnswer": "a",
       "explanations": {
-      "a":" The correct answer is 'Data' because in a D flip-flop, the input line is referred to as the 'data' input",
-      "b":"",
-      "c":"",
-      "d":""
+      "a": "Correct! The D flip-flop's name comes from 'Data' as it directly transfers the input data to the output on the clock edge.",
+      "b": "Incorrect. While D flip-flops do introduce delay, the 'D' specifically stands for 'Data' input.",
+      "c": "Incorrect. The 'D' stands for 'Data' only, not both data and delay.",
+      "d": "Incorrect. The 'D' specifically stands for 'Data' input."
    },
       "difficulty": "beginner"
   },
@@ -28,10 +28,10 @@
       },
       "correctAnswer": "b",
       "explanations": {
-      "a":"This does not give required behaviour",
-      "b":"This configuration ensures that the SR flip flop behaves as a D flip flop, where the D input controls the state of the flip flop.",
-      "c":"Setting the S input to 0 (logic low) means the flip flop will be always in the reset state, regardless of the D input",
-      "d":"Setting the S input to 0 (logic low) means the flip flop will be always in the reset state, regardless of the D input"
+      "a": "Incorrect. This configuration would cause the flip-flop to enter an invalid state when D=1.",
+      "b": "Correct! This configuration ensures that when D=1, S=1 and R=0 (set), and when D=0, S=0 and R=1 (reset), implementing the D flip-flop behavior.",
+      "c": "Incorrect. This configuration would always keep the flip-flop in reset state when D=1.",
+      "d": "Incorrect. This configuration would always keep the flip-flop in reset state regardless of D input."
       },
       "difficulty": "advanced"
   },
@@ -45,10 +45,10 @@
       },
       "correctAnswer": "d",
       "explanations": {
-          "a":"D=0 retains previous state and D=1 gives 0",
-          "b":"D=0 retains previous state and D=1 flips the previous state",
-          "c":"D=1 flips previous state and D=0 gives 1",
-          "d":"This configuration ensures that the flip-flop behaves as a D flip-flop."
+          "a": "Incorrect. This configuration would not properly implement D flip-flop behavior as it would retain state when D=0.",
+          "b": "Incorrect. This configuration would cause the flip-flop to toggle when D=1, which is not D flip-flop behavior.",
+          "c": "Incorrect. This configuration would cause the flip-flop to toggle when D=1, which is not D flip-flop behavior.",
+          "d": "Correct! This configuration ensures that when D=1, J=1 and K=0 (set), and when D=0, J=0 and K=1 (reset), implementing the D flip-flop behavior."
       },
       "difficulty": "advanced"
   },
@@ -62,10 +62,10 @@
       },
       "correctAnswer": "c",
       "explanations": {
-          "a":"In a positive edge-triggered D flip-flop, the output changes only at the positive edge of the clock",
-          "b":"a positive edge-triggered D flip-flop, the output changes only at the positive edge of the clock.",
-          "c":"In a positive edge-triggered D flip-flop, when D=1, the input value is stored and reflected at the output only at the positive edge of the clock. At the negative edge of the clock, the flip-flop retains its previous value and does not change",
-          "d":"In a positive edge-triggered D flip-flop, the output does not enter a high-impedance state at any point in the operation."},
+          "a": "Incorrect. The output only changes at the positive edge of the clock, not at the negative edge.",
+          "b": "Incorrect. The output only changes at the positive edge of the clock, not at the negative edge.",
+          "c": "Correct! In a positive edge-triggered D flip-flop, the output only changes at the positive edge of the clock. At the negative edge, it retains its previous value.",
+          "d": "Incorrect. The output does not enter a high-impedance state in normal operation of a D flip-flop."},
       "difficulty": "intermediate"
   },
   {
@@ -78,10 +78,10 @@
       },
       "correctAnswer": "a",
       "explanations": {
-          "a":"In a D flip flop, the output Q_plus is equal to the input D.",
-          "b":"n a D flip flop, the output Q_plus is not the complement of the input D",
-          "c":"The output Q_plus is not dependent on the current state of Q.",
-          "d":"The output Q_plus is not dependent on the current state of Q."
+          "a": "Correct! The characteristic equation of a D flip-flop is Q_plus = D, meaning the next state is equal to the input D.",
+          "b": "Incorrect. The next state is equal to D, not its complement.",
+          "c": "Incorrect. The next state is not dependent on the current state Q.",
+          "d": "Incorrect. The next state is not a function of both D and Q."
       },
       "difficulty": "beginner"
   }
