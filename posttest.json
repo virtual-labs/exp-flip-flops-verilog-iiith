@@ -1,0 +1,166 @@
+[
+  {"question":"1. Does the order of input and output ports in the argument of module matters?",
+  "answers":{
+              "a":"Yes",
+              "b":"No",
+              "c":"May matter in some situation",
+              "d":"May not matter in some situation"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+    "a" : "Correct! In Verilog, the order of input and output ports in the module declaration determines the order in which they should be connected when instantiating the module.",
+    "b" : "Incorrect. The order of ports is crucial in Verilog as it determines how signals are connected during module instantiation.",
+    "c" : "Incorrect. The order always matters in Verilog module declarations, not just in some situations.",
+    "d" : "Incorrect. The order always matters in Verilog module declarations, not just in some situations."
+  },
+  "difficulty": "intermediate"},
+              
+  {"question":"2. Which of the following loops are supported by verilog?",
+  "answers":{
+              "a":"If-else loop",
+              "b":"For loop",
+              "c":"While loop",
+              "d":"All of these"
+            },
+  "correctAnswer":"d",
+  "explanations": {
+    "a" : "Incorrect. If-else is a conditional statement, not a loop. Verilog supports if-else as a conditional statement.",
+    "b" : "Incorrect. While Verilog does support for loops, the correct answer includes all supported loop types.",
+    "c" : "Incorrect. While Verilog does support while loops, the correct answer includes all supported loop types.",
+    "d" : "Correct! Verilog supports all these control structures: if-else for conditionals, for loops for iteration, and while loops for repeated execution."
+  },
+  "difficulty": "beginner"}, 
+              
+  {"question":"3. What defines the beginning and end of a loop",
+  "answers":{
+              "a":"Begin----end",
+              "b":"Curly brackets ()",
+              "c":"None of these",
+              "d":"Both of them"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+    "a" : "Correct! In Verilog, the 'begin' keyword signifies the start of a loop block, and the 'end' keyword indicates the end of the loop block.",
+    "b" : "Incorrect. In Verilog, curly brackets '{}' are used for concatenation and grouping of signals, not for defining loop blocks.",
+    "c" : "Incorrect. Verilog uses 'begin' and 'end' keywords to define the beginning and end of a loop.",
+    "d" : "Incorrect. Only 'begin' and 'end' are used for loop blocks in Verilog, not curly brackets."
+  },
+  "difficulty": "beginner"},
+              
+  {"question":"4. What defines high impedance state or floating state in verilog?",
+  "answers":{
+              "a":"1",
+              "b":"X",
+              "c":"Z",
+              "d":"Both X and Z"
+            },
+  "correctAnswer":"c",
+  "explanations": {
+    "a" : "Incorrect. In Verilog, '1' represents a logic high or a binary value of 1, not a high impedance state.",
+    "b" : "Incorrect. In Verilog, 'X' represents an unknown value or an uninitialized state, not a high impedance state.",
+    "c" : "Correct! In Verilog, 'Z' represents a high impedance state or a floating state, which is used for tri-state buffers and bidirectional ports.",
+    "d" : "Incorrect. Only 'Z' represents high impedance state, while 'X' represents an unknown value."
+  },
+  "difficulty": "intermediate"},  
+              
+   
+  {"question":" 5. In the following figure A is input and B is output of inverter and C is clock. Tell whether inverter is working synchronously or asynchronously? <img src='images/syn.jpg'>",
+  "answers":{
+              "a":"Asynchronous",
+              "b":"Synchronous",
+              "c":"Unpredictable",
+              "d":"Sometimes synchronous and sometimes asynchronous"
+            },
+  "correctAnswer":"b",
+  "explanations": {
+    "a" : "Incorrect. The inverter is connected to a clock signal, indicating synchronous operation.",
+    "b" : "Correct! The inverter is connected to a clock signal, which means it operates synchronously with the clock.",
+    "c" : "Incorrect. The presence of a clock signal makes the operation predictable and synchronous.",
+    "d" : "Incorrect. The clock connection indicates consistent synchronous operation."
+  },
+  "difficulty": "advanced"},
+              
+  {"question":"6. In the above figure, tell whether inverter is working on positive edge or negative edge of clock? <img src='images/syn.jpg'>",
+  "answers":{
+              "a":"Negative edge",
+              "b":"Positive edge",
+              "c":"Both on positive edge and negative edge",
+              "d":"Middle of positive and negative edge of clock"
+            },
+  "correctAnswer":"b",
+  "explanations": {
+    "a" : "Incorrect. The inverter is connected to respond to the positive edge of the clock signal.",
+    "b" : "Correct! The inverter is designed to operate on the positive edge of the clock signal.",
+    "c" : "Incorrect. The circuit is designed to respond only to the positive edge of the clock.",
+    "d" : "Incorrect. The circuit responds to the positive edge of the clock, not the middle of the edge."
+  },
+  "difficulty": "advanced"},  
+              
+   
+  {"question":"7. In the following figure tell whether reset is synchronous or asynchronous? <img src='images/asyn.jpg'>",
+  "answers":{
+              "a":"Asynchronous",
+              "b":"Synchronous",
+              "c":"Unpredictable",
+              "d":"Sometimes synchronous and sometimes asynchronous"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+    "a" : "Correct! The reset signal is connected directly to the flip-flop's reset input without being synchronized to the clock, indicating asynchronous reset.",
+    "b" : "Incorrect. The reset signal is not synchronized with the clock, making it asynchronous.",
+    "c" : "Incorrect. The reset operation is predictable and occurs immediately when the reset signal is active.",
+    "d" : "Incorrect. The reset is consistently asynchronous as it's not synchronized with the clock."
+  },
+  "difficulty": "advanced"},
+              
+  {"question":"8. What is the similar system task in verilog as printf in C?",
+  "answers":{
+              "a":"$monitor",
+              "b":"$display",
+              "c":"$print",
+              "d":"All of these"
+            },
+  "correctAnswer":"b",
+  "explanations": {
+    "a" : "Incorrect. While $monitor is a system task, it continuously monitors and displays values, unlike printf which displays once.",
+    "b" : "Correct! $display is the Verilog system task that most closely matches printf's functionality, allowing formatted output.",
+    "c" : "Incorrect. There is no $print system task in Verilog.",
+    "d" : "Incorrect. Only $display provides functionality similar to printf."
+  },
+  "difficulty": "intermediate"},  
+              
+  
+  {"question":"9. In the figure given in ques7, tell whether it is a positive edge reset or negative edge?",
+  "answers":{
+              "a":"Both positive and negative edge reset",
+              "b":"Negative edge reset",
+              "c":"Positive edge",
+              "d":"Unpredictable"
+            },
+  "correctAnswer":"a",
+  "explanations": {
+    "a" : "Correct! The reset signal is active on both positive and negative edges as it's an asynchronous reset.",
+    "b" : "Incorrect. The reset is not limited to negative edges only.",
+    "c" : "Incorrect. The reset is not limited to positive edges only.",
+    "d" : "Incorrect. The reset operation is predictable and occurs on both edges."
+  },
+  "difficulty": "advanced"},
+              
+  {"question":"10. Can we include one source file in another in verilog?",
+  "answers":{
+              "a":"No",
+              "b":"Yes using `include",
+              "c":"Yes using `define",
+              "d":"Yes by just writing the name of file in another file"
+            },
+  "correctAnswer":"b",
+  "explanations": {
+    "a" : "Incorrect. Verilog does support file inclusion through the `include directive.",
+    "b" : "Correct! The `include directive is the proper way to include one Verilog source file in another.",
+    "c" : "Incorrect. The `define directive is used for defining macros, not for file inclusion.",
+    "d" : "Incorrect. Verilog requires the `include directive to include source files."
+  },
+  "difficulty": "beginner"}           
+              
+  ]
+  

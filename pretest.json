@@ -1,0 +1,89 @@
+{
+  "version": 2.0,
+  "questions": [
+  {
+      "question": "1.  D in D flip flop stands for ____",
+      "answers": {
+          "a": "Data",
+          "b": "Delay",
+          "c": "Data and delay",
+          "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+      "a": "Correct! The D flip-flop's name comes from 'Data' as it directly transfers the input data to the output on the clock edge.",
+      "b": "Incorrect. While D flip-flops do introduce delay, the 'D' specifically stands for 'Data' input.",
+      "c": "Incorrect. The 'D' stands for 'Data' only, not both data and delay.",
+      "d": "Incorrect. The 'D' specifically stands for 'Data' input."
+   },
+      "difficulty": "beginner"
+  },
+  {
+      "question": "2. How to implement a D flip flop using SR flip flop?",
+      "answers": {
+          "a": "S=D_bar, R=D",
+          "b": "S=D, R=D_bar",
+          "c": "S=0, R=D_bar",
+          "d": "S=0, R=D"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+      "a": "Incorrect. This configuration would cause the flip-flop to enter an invalid state when D=1.",
+      "b": "Correct! This configuration ensures that when D=1, S=1 and R=0 (set), and when D=0, S=0 and R=1 (reset), implementing the D flip-flop behavior.",
+      "c": "Incorrect. This configuration would always keep the flip-flop in reset state when D=1.",
+      "d": "Incorrect. This configuration would always keep the flip-flop in reset state regardless of D input."
+      },
+      "difficulty": "advanced"
+  },
+  {
+      "question": "3. How to implement a D flip flop using JK flip flop?",
+      "answers": {
+          "a": "J=0, K=D",
+          "b": "J=K, J=D",
+          "c": "J=1, K=D",
+          "d": "J=D, K=D_bar"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+          "a": "Incorrect. This configuration would not properly implement D flip-flop behavior as it would retain state when D=0.",
+          "b": "Incorrect. This configuration would cause the flip-flop to toggle when D=1, which is not D flip-flop behavior.",
+          "c": "Incorrect. This configuration would cause the flip-flop to toggle when D=1, which is not D flip-flop behavior.",
+          "d": "Correct! This configuration ensures that when D=1, J=1 and K=0 (set), and when D=0, J=0 and K=1 (reset), implementing the D flip-flop behavior."
+      },
+      "difficulty": "advanced"
+  },
+  {
+      "question": " 4. In positive edge triggered D flip flop if D=1 then at negative edge of the clock, the output will be ____",
+      "answers": {
+          "a": "1",
+          "b": "0",
+          "c": "Previous value",
+          "d": "Z"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+          "a": "Incorrect. The output only changes at the positive edge of the clock, not at the negative edge.",
+          "b": "Incorrect. The output only changes at the positive edge of the clock, not at the negative edge.",
+          "c": "Correct! In a positive edge-triggered D flip-flop, the output only changes at the positive edge of the clock. At the negative edge, it retains its previous value.",
+          "d": "Incorrect. The output does not enter a high-impedance state in normal operation of a D flip-flop."},
+      "difficulty": "intermediate"
+  },
+  {
+      "question": "5. The equation for D flip flop is ____",
+      "answers": {
+          "a": "Q_plus = D",
+          "b": "Q_plus = D_bar",
+          "c": "Q_plus = DQ",
+          "d": "Q_plus = D + Q"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+          "a": "Correct! The characteristic equation of a D flip-flop is Q_plus = D, meaning the next state is equal to the input D.",
+          "b": "Incorrect. The next state is equal to D, not its complement.",
+          "c": "Incorrect. The next state is not dependent on the current state Q.",
+          "d": "Incorrect. The next state is not a function of both D and Q."
+      },
+      "difficulty": "beginner"
+  }
+]
+}
